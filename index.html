@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon | Katarrinelle.com</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body {
+            background-color: #f0f5f9;
+            color: #2e3a59;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 20px;
+        }
+        
+        .image-container {
+            max-width: 800px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            font-size: 2rem;
+            color: #4a6fa5;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+        
+        @media screen and (max-width: 768px) {
+            .image-container {
+                max-width: 100%;
+            }
+        }
+    </style>
+    <!-- Font Awesome for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="image-container">
+        <!-- Replace this with your own image that already has text on it -->
+        <img src="construction.png" alt="Website Under Construction">
+    </div>
+    
+    <div class="social-links">
+        <a href="https://www.instagram.com/katarrinelle" class="social-icon" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@katarrinelle" class="social-icon" target="_blank" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+        </a>
+    </div>
+</body>
+</html>
