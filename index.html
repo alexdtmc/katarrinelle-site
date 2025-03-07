@@ -1,28 +1,38 @@
-<!-- 
-    KATARRINELLE WEBSITE - MODULE STRUCTURE
-    ----------------------------------------
-    This file is organized in the following sections:
-    1. HTML Document Setup & Meta Tags
-    2. CSS Styles (with subsections)
-    3. HTML Structure (Header, Hero, Content Sections, Footer)
-    4. JavaScript for Interactions
-    
-    Each section is heavily commented for easy understanding and modification.
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- 
         SECTION 1: DOCUMENT SETUP & META TAGS
         -------------------------------------
-        This section contains basic HTML document setup, meta tags for SEO,
-        viewport settings for responsive design, and title.
+        Enhanced SEO optimization for luxury property, hotel, and Airbnb videography
     -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Katarrinelle - Luxury property and hotel videography services featuring 4K cinematic videos.">
-    <title>Katarrinelle | Luxury Property & Hotel Videography</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Katarrinelle | Luxury Property & Hotel Videography Services in Miami</title>
+    <meta name="description" content="Professional 4K videography for luxury properties, hotels, and Airbnb rentals. Elevate your property marketing with cinematic video production in Miami.">
+    <meta name="keywords" content="luxury property videography, hotel video production, Airbnb listing video, 4K real estate video, Miami luxury property videos, cinematic real estate videos">
+    <meta name="author" content="Katarrinelle">
+    
+    <!-- Open Graph / Social Media Tags -->
+    <meta property="og:title" content="Katarrinelle | Luxury Property & Hotel Videography">
+    <meta property="og:description" content="Professional 4K videography for luxury properties, hotels, and Airbnb rentals in Miami.">
+    <meta property="og:image" content="https://katarrinelle.com/images/og-image.jpg">
+    <meta property="og:url" content="https://katarrinelle.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Katarrinelle | Luxury Property & Hotel Videography">
+    <meta name="twitter:description" content="Professional 4K videography for luxury properties, hotels, and Airbnb rentals in Miami.">
+    <meta name="twitter:image" content="https://katarrinelle.com/images/twitter-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://katarrinelle.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     
     <!-- 
         EXTERNAL RESOURCES
@@ -34,12 +44,54 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     
     <!-- 
+        STRUCTURED DATA
+        --------------
+        JSON-LD for rich results in search engines
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Katarrinelle",
+      "description": "Luxury property and hotel videography services in Miami. Specializing in cinematic 4K video production for high-end real estate, hotels, and Airbnb rentals.",
+      "image": "https://katarrinelle.com/images/logo.jpg",
+      "url": "https://katarrinelle.com",
+      "telephone": "+1-555-123-4567",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Miami",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "25.7617",
+        "longitude": "80.1918"
+      },
+      "priceRange": "$$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
+      },
+      "sameAs": [
+        "https://www.instagram.com/katarrinelle",
+        "https://www.tiktok.com/@katarrinelle"
+      ]
+    }
+    </script>
+    
+    <!-- 
         SECTION 2: CSS STYLES
         --------------------
         All styles are organized in logical groups with appropriate comments.
-        
-        CSS VARIABLES: We use CSS custom properties for consistent colors, making
-        it easy to update the color scheme site-wide by changing just these values.
     -->
     <style>
         /* 
@@ -231,7 +283,62 @@
             margin-bottom: 2rem;
             font-weight: 300;
         }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        SECTION 3: HTML STRUCTURE
+        ------------------------
+        The HTML is organized into logical sections that correspond to the CSS.
+    -->
+
+    <!-- 
+        3.1 HEADER & NAVIGATION
+        ----------------------
+        Fixed header with logo, navigation links, and CTA button.
+        The 'scrolled' class is added/removed via JavaScript when scrolling.
+    -->
+    <header>
+        <!-- Logo: Links back to homepage -->
+        <a href="#" class="logo">Katarrinelle</a>
         
+        <!-- Main navigation menu -->
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Call-to-action button -->
+        <button class="cta-button">Contact Us</button>
+    </header>
+    <!-- 
+        3.2 HERO SECTION
+        --------------
+        Full-screen hero with background video/image, overlay, and centered content.
+        Enhanced with targeted keywords for luxury property and hotel videography.
+    -->
+    <section class="hero">
+        <!-- Semi-transparent overlay for better text readability -->
+        <div class="hero-overlay"></div>
+        
+        <!-- Background image/video - will be replaced with real content -->
+        <img src="/api/placeholder/1920/1080" alt="Luxury property and hotel videography showcase in Miami" class="hero-video">
+        
+        <!-- Centered content with SEO-optimized headings -->
+        <div class="hero-content">
+            <h1>Luxury Property & Hotel Videography in Miami</h1>
+            <p class="hero-subtitle">Specializing in cinematic 4K video production for luxury properties, hotels, and Airbnb rentals. Elevate your property marketing with professional videography.</p>
+            <button class="cta-button">View Portfolio</button>
+        </div>
+    </section>
+    
+    <style>
         /* 
             2.6 FILTER SECTION STYLES
             ------------------------
@@ -365,9 +472,189 @@
             height: 2px;
             background-color: var(--accent-pink);
         }
-        
+
         /* 
-            2.8 PROJECT GRID STYLES
+            2.8 SERVICES SECTION STYLES
+            -------------------------
+            - Three-column services layout
+            - Service cards with icons
+        */
+        .services-section {
+            padding: 6rem 0;
+            background-color: #050505;
+        }
+        
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .services-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        
+        .service-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.03);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--accent-pink);
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-description {
+            color: #aaa;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+    
+    <!-- 
+        3.3 FILTER SECTION
+        ----------------
+        Sticky filter bar with property type, location, and search functionality.
+        Optimized for the three main segments: Hotels, Airbnb, and Luxury Properties.
+    -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <!-- Filter buttons with icons -->
+            <div class="filter-group">
+                <button class="filter-button active">
+                    <i class="fas fa-video"></i>
+                    All Videos
+                </button>
+                <button class="filter-button">
+                    <i class="fas fa-hotel"></i>
+                    Hotels
+                </button>
+                <button class="filter-button">
+                    <i class="fas fa-home"></i>
+                    Luxury Properties
+                </button>
+                <button class="filter-button">
+                    <i class="fas fa-key"></i>
+                    Airbnb & Rentals
+                </button>
+            </div>
+            
+            <!-- Search bar -->
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search projects...">
+            </div>
+        </div>
+    </section>
+    
+    <!-- 
+        3.4 CATEGORY NAVIGATION
+        ---------------------
+        Horizontally scrolling category bar with keywords relevant to your services.
+    -->
+    <div class="category-nav">
+        <div class="category-container">
+            <!-- Active category (default) -->
+            <a href="#" class="category-item active">
+                <i class="fas fa-th"></i>
+                All Projects
+            </a>
+            <!-- Other categories with targeted keywords -->
+            <a href="#" class="category-item">
+                <i class="fas fa-hotel"></i>
+                Hotel Promotional Videos
+            </a>
+            <a href="#" class="category-item">
+                <i class="fas fa-home"></i>
+                Luxury Properties
+            </a>
+            <a href="#" class="category-item">
+                <i class="fas fa-key"></i>
+                Airbnb Listings
+            </a>
+            <a href="#" class="category-item">
+                <i class="fas fa-umbrella-beach"></i>
+                Beach Properties
+            </a>
+            <a href="#" class="category-item">
+                <i class="fas fa-drone"></i>
+                Aerial Videography
+            </a>
+            <a href="#" class="category-item">
+                <i class="fas fa-film"></i>
+                Cinematic Tours
+            </a>
+        </div>
+    </div>
+    
+    <!-- 
+        3.5 SERVICES SECTION
+        ----------------
+        Highlights the three main service areas: Hotels, Luxury Properties, and Airbnb
+        Each with descriptive text targeting specific keywords.
+    -->
+    <section id="services" class="services-section">
+        <div class="services-container">
+            <div class="services-intro">
+                <h2>Professional Videography Services</h2>
+                <p>Specializing in high-quality video production for luxury properties, hotels, and short-term rentals.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Hotel Videography Service -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <h3 class="service-title">Hotel & Resort Videography</h3>
+                    <p class="service-description">Captivating promotional videos for luxury hotels and resorts that showcase amenities, rooms, and unique experiences. Increase bookings with professional hotel video marketing.</p>
+                    <a href="#hotel-services" class="cta-button">Learn More</a>
+                </div>
+                
+                <!-- Luxury Property Videography Service -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="service-title">Luxury Real Estate Videos</h3>
+                    <p class="service-description">Cinematic 4K video tours of high-end properties. Our luxury real estate videography highlights architectural details, premium amenities, and lifestyle elements to attract discerning buyers.</p>
+                    <a href="#property-services" class="cta-button">Learn More</a>
+                </div>
+                
+                <!-- Airbnb Videography Service -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3 class="service-title">Airbnb & Vacation Rental Videos</h3>
+                    <p class="service-description">Professional video content for Airbnb listings and vacation rentals. Increase bookings and stand out in the competitive short-term rental market with engaging promotional videos.</p>
+                    <a href="#airbnb-services" class="cta-button">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        /* 
+            2.9 PROJECT GRID STYLES
             ---------------------
             - Featured projects grid layout
             - Project cards with hover effects
@@ -505,9 +792,161 @@
             cursor: pointer;
             z-index: 10;
         }
+    </style>
+    
+    <!-- 
+        3.6 FEATURED PROJECTS SECTION
+        ---------------------------
+        Grid of project cards with thumbnails, titles, locations, and play buttons.
+        Each card represents a video project in the portfolio with SEO-optimized content.
+    -->
+    <section id="portfolio" class="featured-projects">
+        <!-- Section header with title and "View All" button -->
+        <div class="section-header">
+            <div>
+                <h2 class="section-title">Featured Video Projects</h2>
+                <p class="section-subtitle">Our most captivating luxury property and hotel videography work</p>
+            </div>
+            <a href="portfolio.html" class="cta-button">View All Projects</a>
+        </div>
         
+        <!-- Project cards grid with structured data for each project -->
+        <div class="projects-grid">
+            <!-- PROJECT CARD 1: Luxury Beachfront Property -->
+            <div class="project-card" onclick="location.href='portfolio/azure-beachfront-villa.html'">
+                <!-- Thumbnail image with descriptive alt text -->
+                <img src="/api/placeholder/600/400" alt="Luxury beachfront villa video tour in Miami Beach" class="project-thumbnail">
+                
+                <!-- Text overlay at bottom -->
+                <div class="project-overlay">
+                    <h3 class="project-title">Azure Beachfront Villa</h3>
+                    <p class="project-location"><i class="fas fa-map-marker-alt"></i> Miami Beach, Florida</p>
+                </div>
+                
+                <!-- Play button appears on hover -->
+                <div class="project-play">
+                    <i class="fas fa-play"></i>
+                </div>
+                
+                <!-- Category tag -->
+                <span class="project-tag">Luxury Property</span>
+            </div>
+            
+            <!-- PROJECT CARD 2: Boutique Hotel -->
+            <div class="project-card" onclick="location.href='portfolio/peninsula-suites-hotel.html'">
+                <img src="/api/placeholder/600/400" alt="Boutique hotel promotional video in South Beach" class="project-thumbnail">
+                <div class="project-overlay">
+                    <h3 class="project-title">The Peninsula Suites</h3>
+                    <p class="project-location"><i class="fas fa-map-marker-alt"></i> South Beach, Miami</p>
+                </div>
+                <div class="project-play">
+                    <i class="fas fa-play"></i>
+                </div>
+                <span class="project-tag">Hotel</span>
+            </div>
+            
+            <!-- PROJECT CARD 3: Airbnb Rental -->
+            <div class="project-card" onclick="location.href='portfolio/palm-cove-airbnb.html'">
+                <img src="/api/placeholder/600/400" alt="Luxury Airbnb rental property video in Coral Gables" class="project-thumbnail">
+                <div class="project-overlay">
+                    <h3 class="project-title">Palm Cove Retreat</h3>
+                    <p class="project-location"><i class="fas fa-map-marker-alt"></i> Coral Gables, Florida</p>
+                </div>
+                <div class="project-play">
+                    <i class="fas fa-play"></i>
+                </div>
+                <span class="project-tag">Airbnb</span>
+            </div>
+            
+            <!-- PROJECT CARD 4: Urban Penthouse -->
+            <div class="project-card" onclick="location.href='portfolio/skyline-penthouse.html'">
+                <img src="/api/placeholder/600/400" alt="Luxury penthouse video tour in Downtown Miami" class="project-thumbnail">
+                <div class="project-overlay">
+                    <h3 class="project-title">Skyline Penthouse</h3>
+                    <p class="project-location"><i class="fas fa-map-marker-alt"></i> Downtown Miami, FL</p>
+                </div>
+                <div class="project-play">
+                    <i class="fas fa-play"></i>
+                </div>
+                <span class="project-tag">Luxury Property</span>
+            </div>
+            
+            <!-- PROJECT CARD 5: Resort Hotel -->
+            <div class="project-card" onclick="location.href='portfolio/oceanview-resort.html'">
+                <img src="/api/placeholder/600/400" alt="Luxury resort promotional video in Key Biscayne" class="project-thumbnail">
+                <div class="project-overlay">
+                    <h3 class="project-title">Oceanview Resort & Spa</h3>
+                    <p class="project-location"><i class="fas fa-map-marker-alt"></i> Key Biscayne, Florida</p>
+                </div>
+                <div class="project-play">
+                    <i class="fas fa-play"></i>
+                </div>
+                <span class="project-tag">Resort</span>
+            </div>
+            
+            <!-- PROJECT CARD 6: Vacation Rental -->
+            <div class="project-card" onclick="location.href='portfolio/biscayne-bay-rental.html'">
+                <img src="/api/placeholder/600/400" alt="Waterfront vacation rental video in Biscayne Bay" class="project-thumbnail">
+                <div class="project-overlay">
+                    <h3 class="project-title">Biscayne Bay Getaway</h3>
+                    <p class="project-location"><i class="fas fa-map-marker-alt"></i> Biscayne Bay, Miami</p>
+                </div>
+                <div class="project-play">
+                    <i class="fas fa-play"></i>
+                </div>
+                <span class="project-tag">Vacation Rental</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Schema markup for featured video projects -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "VideoObject",
+            "name": "Azure Beachfront Villa Tour",
+            "description": "Luxury beachfront property in Miami featuring panoramic ocean views, 5 bedrooms, and infinity pool.",
+            "thumbnailUrl": "https://katarrinelle.com/images/videos/azure-villa-thumbnail.jpg",
+            "uploadDate": "2023-07-15",
+            "contentUrl": "https://katarrinelle.com/videos/azure-beachfront-villa.mp4"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "VideoObject",
+            "name": "The Peninsula Suites Hotel Promotional Video",
+            "description": "Boutique hotel in South Beach Miami featuring luxury accommodations and premium amenities.",
+            "thumbnailUrl": "https://katarrinelle.com/images/videos/peninsula-thumbnail.jpg",
+            "uploadDate": "2023-08-10",
+            "contentUrl": "https://katarrinelle.com/videos/peninsula-suites-hotel.mp4"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "VideoObject",
+            "name": "Palm Cove Airbnb Rental Showcase",
+            "description": "Luxury Airbnb rental property in Coral Gables with private pool and tropical garden.",
+            "thumbnailUrl": "https://katarrinelle.com/images/videos/palm-cove-thumbnail.jpg",
+            "uploadDate": "2023-09-05",
+            "contentUrl": "https://katarrinelle.com/videos/palm-cove-airbnb.mp4"
+          }
+        }
+      ]
+    }
+    </script>
+    <style>
         /* 
-            2.9 ABOUT SECTION STYLES
+            2.10 ABOUT SECTION STYLES
             ----------------------
             - Two-column layout with text and image
             - Contrasting background color
@@ -545,7 +984,7 @@
         }
         
         /* 
-            2.10 FOOTER STYLES
+            2.11 FOOTER STYLES
             ----------------
             - Multi-column footer layout
             - Social links
@@ -638,8 +1077,65 @@
             font-size: 0.9rem;
         }
         
+        /* Contact Form */
+        .contact-form {
+            background-color: rgba(255, 255, 255, 0.03);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            color: var(--off-white);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent-pink);
+        }
+        
+        textarea.form-input {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-button {
+            background-color: var(--accent-pink);
+            color: var(--dark-blue);
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-button:hover {
+            background-color: var(--dark-pink);
+            transform: translateY(-3px);
+        }
+        
         /* 
-            2.11 RESPONSIVE STYLES
+            2.12 RESPONSIVE STYLES
             --------------------
             - Media queries for different screen sizes
             - Adjustments for layouts, typography, and spacing
@@ -685,283 +1181,95 @@
             }
         }
     </style>
-</head>
-
-<body>
-    <!-- 
-        SECTION 3: HTML STRUCTURE
-        ------------------------
-        The HTML is organized into logical sections that correspond to the CSS.
-    -->
-
-    <!-- 
-        3.1 HEADER & NAVIGATION
-        ----------------------
-        Fixed header with logo, navigation links, and CTA button.
-        The 'scrolled' class is added/removed via JavaScript when scrolling.
-    -->
-    <header>
-        <!-- Logo: Links back to homepage -->
-        <a href="#" class="logo">Katarrinelle</a>
-        
-        <!-- Main navigation menu -->
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        
-        <!-- Call-to-action button -->
-        <button class="cta-button">Book a Session</button>
-    </header>
     
     <!-- 
-        3.2 HERO SECTION
-        --------------
-        Full-screen hero with background video/image, overlay, and centered content.
-        In the final implementation, replace the placeholder with a real video.
-    -->
-    <section class="hero">
-        <!-- Semi-transparent overlay for better text readability -->
-        <div class="hero-overlay"></div>
-        
-        <!-- Background image/video - will be replaced with real content -->
-        <img src="/api/placeholder/1920/1080" alt="Luxury property video showcase" class="hero-video">
-        
-        <!-- Centered content -->
-        <div class="hero-content">
-            <h1>Elevate your property through cinematic vision.</h1>
-            <p class="hero-subtitle">Luxury 4K videography showcasing exceptional properties and hotels with artistic precision and attention to detail.</p>
-            <button class="cta-button">View Portfolio</button>
-        </div>
-    </section>
-    
-    <!-- 
-        3.3 FILTER SECTION
-        ----------------
-        Sticky filter bar with property type, location, and search functionality.
-        Similar to Wander's filtering system.
-    -->
-    <section class="filter-section">
-        <div class="filter-container">
-            <!-- Filter buttons with icons -->
-            <div class="filter-group">
-                <button class="filter-button">
-                    <i class="fas fa-map-marker-alt"></i>
-                    Locations
-                </button>
-                <button class="filter-button">
-                    <i class="fas fa-building"></i>
-                    Property Type
-                </button>
-                <button class="filter-button">
-                    <i class="fas fa-video"></i>
-                    Video Style
-                </button>
-                <button class="filter-button">
-                    <i class="fas fa-sliders-h"></i>
-                    Filters
-                </button>
-            </div>
-            
-            <!-- Search bar -->
-            <div class="search-bar">
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="Search projects...">
-            </div>
-        </div>
-    </section>
-    
-    <!-- 
-        3.4 CATEGORY NAVIGATION
-        ---------------------
-        Horizontally scrolling category bar inspired by Wander's category filters.
-        Each item has an icon and label, with the active item highlighted.
-    -->
-    <div class="category-nav">
-        <div class="category-container">
-            <!-- Active category (default) -->
-            <a href="#" class="category-item active">
-                <i class="fas fa-th"></i>
-                All Projects
-            </a>
-            <!-- Other categories -->
-            <a href="#" class="category-item">
-                <i class="fas fa-hotel"></i>
-                Luxury Hotels
-            </a>
-            <a href="#" class="category-item">
-                <i class="fas fa-home"></i>
-                Residential
-            </a>
-            <a href="#" class="category-item">
-                <i class="fas fa-umbrella-beach"></i>
-                Beach Properties
-            </a>
-            <a href="#" class="category-item">
-                <i class="fas fa-mountain"></i>
-                Mountain Retreats
-            </a>
-            <a href="#" class="category-item">
-                <i class="fas fa-city"></i>
-                Urban Penthouses
-            </a>
-            <a href="#" class="category-item">
-                <i class="fas fa-plane"></i>
-                Destination Guides
-            </a>
-        </div>
-    </div>
-    
-    <!-- 
-        3.5 FEATURED PROJECTS SECTION
-        ---------------------------
-        Grid of project cards with thumbnails, titles, locations, and play buttons.
-        Each card represents a video project in the portfolio.
-    -->
-    <section class="featured-projects">
-        <!-- Section header with title and "View All" button -->
-        <div class="section-header">
-            <div>
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Our most captivating luxury property videos</p>
-            </div>
-            <a href="#" class="cta-button">View All</a>
-        </div>
-        
-        <!-- Project cards grid -->
-        <div class="projects-grid">
-            <!-- PROJECT CARD 1 -->
-            <div class="project-card">
-                <!-- Thumbnail image - replace with actual property image -->
-                <img src="/api/placeholder/600/400" alt="Luxury Beach Villa" class="project-thumbnail">
-                
-                <!-- Text overlay at bottom -->
-                <div class="project-overlay">
-                    <h3 class="project-title">Azure Beachfront Villa</h3>
-                    <p class="project-location"><i class="fas fa-map-marker-alt"></i> Miami, Florida</p>
-                </div>
-                
-                <!-- Play button appears on hover -->
-                <div class="project-play">
-                    <i class="fas fa-play"></i>
-                </div>
-                
-                <!-- Category tag -->
-                <span class="project-tag">Beachfront</span>
-            </div>
-            
-            <!-- PROJECT CARD 2 -->
-            <div class="project-card">
-                <img src="/api/placeholder/600/400" alt="Luxury Hotel Suite" class="project-thumbnail">
-                <div class="project-overlay">
-                    <h3 class="project-title">The Peninsula Suites</h3>
-                    <p class="project-location"><i class="fas fa-map-marker-alt"></i> New York, NY</p>
-                </div>
-                <div class="project-play">
-                    <i class="fas fa-play"></i>
-                </div>
-                <span class="project-tag">Hotel</span>
-            </div>
-            
-            <!-- PROJECT CARD 3 -->
-            <div class="project-card">
-                <img src="/api/placeholder/600/400" alt="Mountain Chalet" class="project-thumbnail">
-                <div class="project-overlay">
-                    <h3 class="project-title">Alpine Luxury Chalet</h3>
-                    <p class="project-location"><i class="fas fa-map-marker-alt"></i> Aspen, Colorado</p>
-                </div>
-                <div class="project-play">
-                    <i class="fas fa-play"></i>
-                </div>
-                <span class="project-tag">Mountain</span>
-            </div>
-            
-            <!-- PROJECT CARD 4 -->
-            <div class="project-card">
-                <img src="/api/placeholder/600/400" alt="Urban Penthouse" class="project-thumbnail">
-                <div class="project-overlay">
-                    <h3 class="project-title">Skyline Penthouse</h3>
-                    <p class="project-location"><i class="fas fa-map-marker-alt"></i> Los Angeles, CA</p>
-                </div>
-                <div class="project-play">
-                    <i class="fas fa-play"></i>
-                </div>
-                <span class="project-tag">Urban</span>
-            </div>
-            
-            <!-- PROJECT CARD 5 -->
-            <div class="project-card">
-                <img src="/api/placeholder/600/400" alt="Tropical Resort" class="project-thumbnail">
-                <div class="project-overlay">
-                    <h3 class="project-title">Palm Cove Resort</h3>
-                    <p class="project-location"><i class="fas fa-map-marker-alt"></i> Bali, Indonesia</p>
-                </div>
-                <div class="project-play">
-                    <i class="fas fa-play"></i>
-                </div>
-                <span class="project-tag">Resort</span>
-            </div>
-            
-            <!-- PROJECT CARD 6 -->
-            <div class="project-card">
-                <img src="/api/placeholder/600/400" alt="Historic Mansion" class="project-thumbnail">
-                <div class="project-overlay">
-                    <h3 class="project-title">Rosemont Estate</h3>
-                    <p class="project-location"><i class="fas fa-map-marker-alt"></i> Savannah, Georgia</p>
-                </div>
-                <div class="project-play">
-                    <i class="fas fa-play"></i>
-                </div>
-                <span class="project-tag">Historic</span>
-            </div>
-        </div>
-    </section>
-    
-   <!-- Continued from previous section -->
-
-    <!-- 
-        3.6 ABOUT SECTION (CONTINUED)
+        3.7 ABOUT SECTION
         ---------------
         Two-column section with brand story and image.
-        Has a contrasting background color (dark blue).
+        SEO-optimized content highlighting expertise in luxury videography.
     -->
-    <section class="about-section">
+    <section id="about" class="about-section">
         <div class="about-container">
-            <!-- Text content -->
+            <!-- Text content with targeted keywords -->
             <div class="about-content">
-                <h2>Cinematic Excellence for Extraordinary Properties</h2>
-                <p>At Katarrinelle, we capture the essence of luxury properties through immersive 4K videography. Every frame is thoughtfully composed to highlight architectural details, spatial flow, and the unique ambiance that makes each property exceptional.</p>
-                <p>With a background in cinematography and a passion for architectural storytelling, our approach combines technical precision with artistic vision to create compelling visual narratives for high-end properties and hotels.</p>
-                <!-- Call-to-action button -->
-                <button class="cta-button">Learn More</button>
+                <h2>Miami's Premier Luxury Property Videographer</h2>
+                <p>At Katarrinelle, we specialize in creating cinematic 4K videos that showcase the unique character and features of luxury properties, hotels, and vacation rentals. Our Miami-based videography team combines technical expertise with artistic vision to produce compelling visual stories that engage viewers and drive results.</p>
+                <p>With years of experience in real estate and hospitality videography, we understand how to highlight architectural details, capture the perfect lighting, and create emotional connections through professional video production. Each project receives our dedicated attention to ensure every frame meets our high standards of excellence.</p>
+                <p>From boutique hotels to exclusive waterfront estates and premium Airbnb listings, our video production services help property owners and managers stand out in a competitive market and attract discerning clients.</p>
+                <a href="#contact" class="cta-button">Work With Us</a>
             </div>
             
-            <!-- About image - replace with actual image -->
+            <!-- About image with descriptive alt text -->
             <div class="about-image">
-                <img src="/api/placeholder/600/800" alt="Behind the scenes" />
+                <img src="/api/placeholder/600/800" alt="Professional videographer filming luxury Miami property" />
             </div>
         </div>
     </section>
     
     <!-- 
-        3.7 FOOTER
+        3.8 CONTACT SECTION
+        ----------------
+        Simple contact form with SEO-optimized heading and text.
+    -->
+    <section id="contact" class="services-section">
+        <div class="services-container">
+            <div class="services-intro">
+                <h2>Request a Consultation</h2>
+                <p>Contact us to discuss your luxury property or hotel videography project in Miami.</p>
+            </div>
+            
+            <div class="contact-form">
+                <form action="submit-form.php" method="post">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="property-type" class="form-label">Property Type</label>
+                        <select id="property-type" name="property-type" class="form-input">
+                            <option value="luxury-property">Luxury Property</option>
+                            <option value="hotel">Hotel/Resort</option>
+                            <option value="airbnb">Airbnb/Vacation Rental</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Project Details</label>
+                        <textarea id="message" name="message" class="form-input" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Send Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 
+        3.9 FOOTER
         --------
         Multi-column footer with company info, services, navigation, and contact details.
-        Includes social links and copyright information.
+        Includes SEO-optimized links and social media integration.
     -->
     <footer>
         <div class="footer-container">
             <!-- Top section with columns -->
             <div class="footer-top">
-                <!-- Company info column -->
+                <!-- Company info column with targeted keywords -->
                 <div class="footer-column">
                     <h4 class="footer-title">Katarrinelle</h4>
-                    <p>Luxury property and hotel videography services, capturing extraordinary spaces through cinematic vision.</p>
+                    <p>Miami's premier luxury property and hotel videography service. We create cinematic 4K videos for high-end real estate, hotels, and Airbnb rentals that captivate viewers and drive results.</p>
                     <!-- Social media links -->
                     <div class="social-links">
                         <a href="https://www.instagram.com/katarrinelle" class="social-link" target="_blank" aria-label="Instagram">
@@ -976,15 +1284,15 @@
                     </div>
                 </div>
                 
-                <!-- Services column -->
+                <!-- Services column with keyword-rich links -->
                 <div class="footer-column">
-                    <h4 class="footer-title">Services</h4>
+                    <h4 class="footer-title">Our Services</h4>
                     <ul class="footer-links">
-                        <li><a href="#">4K Property Videography</a></li>
-                        <li><a href="#">Hotel & Resort Videos</a></li>
-                        <li><a href="#">Aerial Drone Footage</a></li>
-                        <li><a href="#">Promotional Videos</a></li>
-                        <li><a href="#">Destination Guides</a></li>
+                        <li><a href="services/luxury-property-videography.html">Luxury Property Videography</a></li>
+                        <li><a href="services/hotel-video-production.html">Hotel Video Production</a></li>
+                        <li><a href="services/airbnb-rental-videos.html">Airbnb Listing Videos</a></li>
+                        <li><a href="services/aerial-drone-videography.html">Aerial Drone Footage</a></li>
+                        <li><a href="services/virtual-property-tours.html">Virtual Property Tours</a></li>
                     </ul>
                 </div>
                 
@@ -993,20 +1301,22 @@
                     <h4 class="footer-title">Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
                     </ul>
                 </div>
                 
-                <!-- Contact info column -->
+                <!-- Contact info column with location-specific details -->
                 <div class="footer-column">
-                    <h4 class="footer-title">Contact</h4>
+                    <h4 class="footer-title">Contact Us</h4>
                     <ul class="footer-links">
                         <li><i class="fas fa-envelope"></i> info@katarrinelle.com</li>
                         <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
                         <li><i class="fas fa-map-marker-alt"></i> Miami, Florida</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 5:00 PM</li>
                     </ul>
                 </div>
             </div>
@@ -1014,7 +1324,7 @@
             <!-- Bottom section with logo and copyright -->
             <div class="footer-bottom">
                 <a href="#" class="footer-logo">Katarrinelle</a>
-                <p class="copyright">&copy; 2025 Katarrinelle. All rights reserved.</p>
+                <p class="copyright">&copy; 2025 Katarrinelle. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
             </div>
         </div>
     </footer>
@@ -1023,7 +1333,6 @@
         SECTION 4: JAVASCRIPT
         -------------------
         Contains all JavaScript functionality for the website.
-        Currently just adds a scrolled class to header when scrolling.
     -->
     <script>
         // When page loads
@@ -1042,16 +1351,25 @@
                 }
             });
             
-            /* 
-                ADDITIONAL JAVASCRIPT FUNCTIONALITY CAN BE ADDED HERE
-                
-                Potential additions:
-                - Mobile menu toggle
-                - Filter functionality
-                - Video modal for project cards
-                - Smooth scrolling for navigation links
-                - Form validation for contact form
-            */
+            // ADD SMOOTH SCROLLING FOR ANCHOR LINKS
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
         });
     </script>
 </body>
