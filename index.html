@@ -87,6 +87,7 @@
       ]
     }
     </script>
+    
     <!-- 
         SECTION 2: CSS STYLES
         --------------------
@@ -415,7 +416,7 @@
             height: 2px;
             background-color: var(--accent-pink);
         }
-        
+
         /* 
             2.8 PROJECT GRID STYLES
             ---------------------
@@ -555,7 +556,7 @@
             cursor: pointer;
             z-index: 10;
         }
-
+        
         /* 
             2.9 SERVICES SECTION STYLES
             -------------------------
@@ -611,140 +612,375 @@
             color: #aaa;
             margin-bottom: 1.5rem;
         }
+        /* 
+            2.10 ABOUT SECTION STYLES
+            ----------------------
+            - Two-column layout with text and image
+            - Contrasting background color
+        */
+        .about-section {
+            padding: 6rem 0;
+            background-color: var(--dark-blue);  /* Contrasting background */
+        }
+        
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            gap: 4rem;  /* Space between columns */
+        }
+        
+        .about-content {
+            flex: 1;  /* Take up equal space */
+        }
+        
+        .about-image {
+            flex: 1;
+            position: relative;
+            aspect-ratio: 3/4;  /* Portrait orientation */
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            background-color: rgba(255, 255, 255, 0.03);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            color: var(--off-white);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent-pink);
+        }
+        
+        textarea.form-input {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-button {
+            background-color: var(--accent-pink);
+            color: var(--dark-blue);
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-button:hover {
+            background-color: var(--dark-pink);
+            transform: translateY(-3px);
+        }
+        /* 
+            2.11 FOOTER STYLES
+            ----------------
+            - Multi-column footer layout
+            - Social links
+            - Footer navigation
+            - Copyright section
+        */
+        footer {
+            background-color: #000;
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-column {
+            flex: 1;
+            margin-right: 2rem;
+        }
+        
+        .footer-column:last-child {
+            margin-right: 0;
+        }
+        
+        .footer-title {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: #777;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-pink);
+        }
+        
+        /* Social media icons */
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-link {
+            color: var(--off-white);
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-link:hover {
+            color: var(--accent-pink);
+        }
+        
+        /* Copyright section with border */
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--off-white);
+            text-decoration: none;
+        }
+        
+        .copyright {
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        /* 
+            2.12 RESPONSIVE STYLES
+            --------------------
+            - Media queries for different screen sizes
+            - Adjustments for layouts, typography, and spacing
+        */
+        @media (max-width: 992px) {
+            /* Tablet and smaller laptops */
+            .about-container {
+                flex-direction: column;  /* Stack columns */
+            }
+            
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  /* Smaller cards */
+            }
+        }
+        
+        @media (max-width: 768px) {
+            /* Mobile devices */
+            header {
+                padding: 1rem 1.5rem;  /* Smaller padding */
+            }
+            
+            nav ul {
+                display: none;  /* Hide navigation - would need a mobile menu toggle */
+            }
+            
+            h1 {
+                font-size: 2.5rem;  /* Smaller headings */
+            }
+            
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .footer-top {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .footer-column {
+                margin-right: 0;
+            }
+        }
     </style>
-</head>
-
-<body>
-    <!-- 
-        SECTION 3: HTML STRUCTURE
-        ------------------------
-        The HTML is organized into logical sections that correspond to the CSS.
-    -->
-
-    <!-- 
-        3.1 HEADER & NAVIGATION
-        ----------------------
-        Fixed header with logo, navigation links, and CTA button.
-        The 'scrolled' class is added/removed via JavaScript when scrolling.
-    -->
-    <header>
-        <!-- Logo: Links back to homepage -->
-        <a href="#" class="logo">Katarrinelle</a>
-        
-        <!-- Main navigation menu -->
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        
-        <!-- Call-to-action button -->
-        <button class="cta-button">Contact Us</button>
-    </header>
+    </head>
     
-    <!-- 
-        3.2 HERO SECTION
-        --------------
-        Full-screen hero with background video/image, overlay, and centered content.
-        Enhanced with targeted keywords for luxury property and hotel videography.
-    -->
-    <section class="hero">
-        <!-- Semi-transparent overlay for better text readability -->
-        <div class="hero-overlay"></div>
+    <body>
+        <!-- 
+            SECTION 3: HTML STRUCTURE
+            ------------------------
+            The HTML is organized into logical sections that correspond to the CSS.
+        -->
+    
+        <!-- 
+            3.1 HEADER & NAVIGATION
+            ----------------------
+            Fixed header with logo, navigation links, and CTA button.
+            The 'scrolled' class is added/removed via JavaScript when scrolling.
+        -->
+        <header>
+            <!-- Logo: Links back to homepage -->
+            <a href="#" class="logo">Katarrinelle</a>
+            
+            <!-- Main navigation menu -->
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Call-to-action button -->
+            <button class="cta-button">Contact Us</button>
+        </header>
         
-        <!-- Background video - replace with actual video -->
-        <video class="hero-video" autoplay muted loop playsinline poster="/images/hero-poster.jpg">
-            <source src="/videos/hero-background.mp4" type="video/mp4">
-        </video>
+        <!-- 
+            3.2 HERO SECTION
+            --------------
+            Full-screen hero with background video/image, overlay, and centered content.
+            Enhanced with targeted keywords for luxury property and hotel videography.
+        -->
+        <section class="hero">
+            <!-- Semi-transparent overlay for better text readability -->
+            <div class="hero-overlay"></div>
+            
+            <!-- Background video - replace with actual video -->
+            <video class="hero-video" autoplay muted loop playsinline poster="/images/hero-poster.jpg">
+                <source src="/videos/hero-background.mp4" type="video/mp4">
+            </video>
+            
+            <!-- Centered content with SEO-optimized headings -->
+            <div class="hero-content">
+                <h1>Luxury Property & Hotel Videography in Miami</h1>
+                <p class="hero-subtitle">Specializing in cinematic 4K video production for luxury properties, hotels, and Airbnb rentals. Elevate your property marketing with professional videography.</p>
+                <button class="cta-button">View Portfolio</button>
+            </div>
+        </section>
         
-        <!-- Centered content with SEO-optimized headings -->
-        <div class="hero-content">
-            <h1>Luxury Property & Hotel Videography in Miami</h1>
-            <p class="hero-subtitle">Specializing in cinematic 4K video production for luxury properties, hotels, and Airbnb rentals. Elevate your property marketing with professional videography.</p>
-            <button class="cta-button">View Portfolio</button>
-        </div>
-    </section>
-    <!-- 
-        3.3 FILTER SECTION
-        ----------------
-        Sticky filter bar with property type, location, and search functionality.
-        Optimized for the three main segments: Hotels, Airbnb, and Luxury Properties.
-    -->
-    <section class="filter-section">
-        <div class="filter-container">
-            <!-- Filter buttons with icons -->
-            <div class="filter-group">
-                <button class="filter-button active">
-                    <i class="fas fa-video"></i>
-                    All Videos
-                </button>
-                <button class="filter-button">
+        <!-- 
+            3.3 FILTER SECTION
+            ----------------
+            Sticky filter bar with property type, location, and search functionality.
+            Optimized for the three main segments: Hotels, Airbnb, and Luxury Properties.
+        -->
+        <section class="filter-section">
+            <div class="filter-container">
+                <!-- Filter buttons with icons -->
+                <div class="filter-group">
+                    <button class="filter-button active">
+                        <i class="fas fa-video"></i>
+                        All Videos
+                    </button>
+                    <button class="filter-button">
+                        <i class="fas fa-hotel"></i>
+                        Hotels
+                    </button>
+                    <button class="filter-button">
+                        <i class="fas fa-home"></i>
+                        Luxury Properties
+                    </button>
+                    <button class="filter-button">
+                        <i class="fas fa-key"></i>
+                        Airbnb & Rentals
+                    </button>
+                </div>
+                
+                <!-- Search bar -->
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search projects...">
+                </div>
+            </div>
+        </section>
+        
+        <!-- 
+            3.4 CATEGORY NAVIGATION
+            ---------------------
+            Horizontally scrolling category bar with keywords relevant to your services.
+        -->
+        <div class="category-nav">
+            <div class="category-container">
+                <!-- Active category (default) -->
+                <a href="#" class="category-item active">
+                    <i class="fas fa-th"></i>
+                    All Projects
+                </a>
+                <!-- Other categories with targeted keywords -->
+                <a href="#" class="category-item">
                     <i class="fas fa-hotel"></i>
-                    Hotels
-                </button>
-                <button class="filter-button">
+                    Hotel Promotional Videos
+                </a>
+                <a href="#" class="category-item">
                     <i class="fas fa-home"></i>
                     Luxury Properties
-                </button>
-                <button class="filter-button">
+                </a>
+                <a href="#" class="category-item">
                     <i class="fas fa-key"></i>
-                    Airbnb & Rentals
-                </button>
-            </div>
-            
-            <!-- Search bar -->
-            <div class="search-bar">
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="Search projects...">
+                    Airbnb Listings
+                </a>
+                <a href="#" class="category-item">
+                    <i class="fas fa-umbrella-beach"></i>
+                    Beach Properties
+                </a>
+                <a href="#" class="category-item">
+                    <i class="fas fa-drone"></i>
+                    Aerial Videography
+                </a>
+                <a href="#" class="category-item">
+                    <i class="fas fa-film"></i>
+                    Cinematic Tours
+                </a>
             </div>
         </div>
-    </section>
-    
-    <!-- 
-        3.4 CATEGORY NAVIGATION
-        ---------------------
-        Horizontally scrolling category bar with keywords relevant to your services.
-    -->
-    <div class="category-nav">
-        <div class="category-container">
-            <!-- Active category (default) -->
-            <a href="#" class="category-item active">
-                <i class="fas fa-th"></i>
-                All Projects
-            </a>
-            <!-- Other categories with targeted keywords -->
-            <a href="#" class="category-item">
-                <i class="fas fa-hotel"></i>
-                Hotel Promotional Videos
-            </a>
-            <a href="#" class="category-item">
-                <i class="fas fa-home"></i>
-                Luxury Properties
-            </a>
-            <a href="#" class="category-item">
-                <i class="fas fa-key"></i>
-                Airbnb Listings
-            </a>
-            <a href="#" class="category-item">
-                <i class="fas fa-umbrella-beach"></i>
-                Beach Properties
-            </a>
-            <a href="#" class="category-item">
-                <i class="fas fa-drone"></i>
-                Aerial Videography
-            </a>
-            <a href="#" class="category-item">
-                <i class="fas fa-film"></i>
-                Cinematic Tours
-            </a>
-        </div>
-    </div>
-    
-    <!-- 
+
+        <!-- 
         3.5 FEATURED PROJECTS SECTION (NOW BEFORE SERVICES)
         ----------------------------------------
         Grid of project cards with thumbnails, titles, locations, and play buttons.
@@ -940,7 +1176,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- 
         3.7 ABOUT SECTION
         ---------------
@@ -1013,7 +1249,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- 
         3.9 FOOTER
         --------
