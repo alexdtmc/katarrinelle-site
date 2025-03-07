@@ -40,6 +40,32 @@
             display: block;
         }
         
+        .center-sign {
+            text-align: center;
+            max-width: 600px;
+            padding: 2rem;
+            z-index: 5;
+        }
+        
+        .center-sign h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300; /* Light */
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        
+        .center-sign p {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300; /* Light */
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            margin-bottom: 1.5rem;
+        }
+        
         .social-links {
             display: flex;
             justify-content: center;
@@ -61,16 +87,37 @@
         .social-icon:hover {
             transform: scale(1.2);
         }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .center-sign h1 {
+                font-size: 2rem;
+            }
+            
+            .center-sign p {
+                font-size: 1rem;
+            }
+            
+            .social-icon {
+                font-size: 2.5rem;
+            }
+        }
     </style>
     <!-- Font Awesome for icons -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Google Fonts - Including Montserrat Light (300) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="image-container">
-        <!-- Replace with your own image that already has text on it -->
+        <!-- Replace with your PNG background image -->
         <img src="construction.png" alt="Website Under Construction">
+    </div>
+    
+    <div class="center-sign">
+        <h1>Luxury videography portfolio coming soon</h1>
+        <p>Our website is currently under development. We're creating something beautiful to showcase our luxury property and hotel videography services.</p>
+        <p>Connect with us on social media below for updates and to get in touch.</p>
     </div>
     
     <div class="social-links">
